@@ -1,6 +1,8 @@
 import React from 'react';
 import { FlatList, View } from 'react-native';
+import data from './data.json';
 import Item from './Item';
+import Separator from './Separator';
 
 export default class NewsFeed extends React.Component {
   constructor(props) {
@@ -42,33 +44,10 @@ export default class NewsFeed extends React.Component {
     console.log('Updating: 4_render');
     return (
       <FlatList
-        data={[
-          {
-            id: 1,
-            content:
-              'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
-          },
-          {
-            id: 2,
-            content:
-              'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
-          },
-          {
-            id: 3,
-            content:
-              'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
-          },
-          {
-            id: 4,
-            content:
-              'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
-          }
-        ]}
+        data={data}
         keyExtractor={item => item.id}
         renderItem={({ item }) => <Item item={item} />}
-        ItemSeparatorComponent={() => (
-          <View style={{ height: 15, backgroundColor: 'transparent' }} />
-        )}
+        ItemSeparatorComponent={() => <Separator />}
       />
     );
   }

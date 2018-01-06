@@ -1,6 +1,7 @@
 /**
- * Sample React Native App
+ * Sample Facebook circle dev Hanoi
  * https://github.com/facebook/react-native
+ * https://goo.gl/fRSH6Y
  * @flow
  */
 
@@ -9,7 +10,7 @@ import { View } from 'react-native';
 import Header from './src/container/Header';
 import NewsFeed from './src/container/NewsFeed';
 
-export default class App extends Component<{}> {
+export default class App extends Component {
   state = {
     mountNewsFeed: true
   };

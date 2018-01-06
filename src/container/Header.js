@@ -16,7 +16,7 @@ export default class Header extends React.Component {
           activeOpacity={0.8}
           onPress={this.props.toggleMountNewsFeed}
         >
-          <Text>Mount/Unmount</Text>
+          <Text>Oops</Text>
         </TouchableOpacity>
         <Text style={styles.title}>News Feed</Text>
         <TouchableOpacity activeOpacity={0.8} onPress={this.props.refreshAll}>
